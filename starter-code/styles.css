@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+
+:root {
+  /*------------------------------------------*/
+  /* Colors */
+  /*------------------------------------------*/
+
+  --light: hsl(20, 33%, 98%);
+  --dark: hsl(244, 23%, 12%);
+  --cyan: hsl(177, 68%, 64%);
+  --red: hsl(12, 94%, 65%);
+  --orange: hsl(33, 100%, 70%);
+
+  /*------------------------------------------*/
+  /* Typography */
+  /*------------------------------------------*/
+
+  --ff: "IBM Plex Sans", sans-serif;
+
+  --fs-900: 88px;
+  --fs-850: 65px;
+  --fs-800: 64px;
+  --fs-700: 40px;
+  --fs-600: 32px;
+  --fs-500: 20px;
+  --fs-400: 18px;
+  --fs-300: 16px;
+
+  --fw-reg: 400;
+  --fw-bold: 700;
+  --lh: 1.6;
+}
+html {
+  height: 100%;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+body {
+  color: var(--dark);
+  min-height: 100%;
+  height: 100%;
+  font-family: var(--ff);
+  font-size: var(--fs-400);
+}
+
+body > .top-right {
+  position: absolute;
+  width: 312px;
+  height: 468px;
+  right: 0px;
+  top: -40px;
+}
+
+.bg {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -999999999;
+}
+
+main {
+  padding: 60px 165px 90px;
+  text-align: center;
+  position: relative;
+}
+
+main > div {
+  text-align: left;
+  margin-top: 125px;
+  font-size: 40px;
+  font-weight: var(--fw-bold);
+  width: 90%;
+  line-height: 1;
+}
+
+main > div > p {
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  width: 85%;
+}
+
+section {
+  color: var(--light);
+  margin-top: 321px;
+  width: 100%;
+  height: 600px;
+  border-radius: 10px;
+  background-image: url("assets/bg-pattern-2.svg");
+  background-color: var(--dark);
+  background-repeat: no-repeat;
+  background-position: top -45px left 336px;
+  position: relative;
+}
+
+section > img {
+  height: 642px;
+  width: 312px;
+  position: absolute;
+  left: 102px;
+  bottom: 171px;
+}
+
+section > aside {
+  text-align: left;
+  padding: 58px 59px 48px 54px;
+  background-color: var(--red);
+  position: absolute;
+  top: 90px;
+  right: 95px;
+  height: 625px;
+  width: 446px;
+  border-radius: 10px;
+}
+
+section > aside h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+section > aside p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-top: 22px;
+}
+
+section > aside > div {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  font-size: 65px;
+  font-weight: 700;
+}
+
+section > aside > div > span {
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 16px;
+}
+
+section > aside > button {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 61px;
+  font-weight: 700;
+}
+
+section > aside > button > img {
+  margin-right: 8px;
+}
+
+section > aside > button:first-of-type {
+  margin-top: 32px;
+}
+
+section > aside > button:not(:first-of-type) {
+  margin-top: 16px;
+}
+
+section > aside > .apple {
+  background-color: black;
+  color: white;
+}
+
+section > aside > .apple:hover {
+  background-color: var(--cyan);
+  color: white;
+  cursor: pointer;
+}
+
+section > aside > .android {
+  background-color: white;
+  color: black;
+}
+
+section > aside > .android:hover {
+  background-color: var(--orange);
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  text-align: left;
+  margin-top: 202px;
+}
+
+footer > .left {
+  display: flex;
+  width: 651px;
+  justify-content: space-between;
+}
+
+footer > .left > img {
+  height: 32px;
+  width: 150px;
+}
+
+footer > .left > p {
+  width: 366px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+footer > .left > p > span {
+  font-weight: 700;
+}
+footer > ul {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+footer > ul > li:not(:last-child) {
+  margin-right: 15px;
+}
+
+footer > ul > li > img:hover {
+  filter: invert(43%) sepia(98%) saturate(857%) hue-rotate(332deg)
+    brightness(118%) contrast(96%);
+  cursor: pointer;
+}
+
+@media (max-width: 769px) {
+  body > .top-right {
+    width: 266px;
+    height: 400px;
+  }
+  .bg {
+    min-height: 100%;
+    min-width: 1300px;
+    width: 100%;
+    height: auto;
+    left: -410px;
+    top: -240px;
+  }
+  main {
+    padding: 61px 39px 85px 33px;
+  }
+  main > div {
+    width: 75%;
+    margin-top: 95px;
+    font-size: 32px;
+  }
+
+  main > div > p {
+    margin-top: 28px;
+    font-size: 18px;
+    width: 100%;
+  }
+
+  section {
+    margin-top: 249px;
+    background-position: top -50px left 210px;
+  }
+
+  section > img {
+    height: 556px;
+    width: 270px;
+    left: 64px;
+    bottom: 182px;
+  }
+
+  section > aside {
+    padding: 48px 49px 48px 48px;
+    height: 546px;
+    width: 399px;
+    top: 150px;
+    right: 58px;
+  }
+  section > aside h2 {
+    font-size: 32px;
+  }
+  section > aside p {
+    font-size: 18px;
+    margin-top: 12px;
+    line-height: 25px;
+  }
+  section > aside > div {
+    margin-top: 26px;
+  }
+
+  section > aside > button:first-of-type {
+    margin-top: 32px;
+  }
+
+  footer {
+    margin-top: 183px;
+  }
+
+  footer > .left {
+    flex-direction: column;
+  }
+  footer > .left p {
+    margin-top: 32px;
+  }
+
+  footer > ul {
+    align-items: flex-end;
+    margin-bottom: 29px;
+  }
+}
+
+@media (max-width: 376px) {
+  body > .top-right {
+    display: none;
+  }
+
+  header {
+    padding: 40px 24px 0px 24px;
+  }
+  .bg {
+    aspect-ratio: 1;
+    position: absolute;
+    min-height: 200px;
+    min-width: 200px;
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: 150px;
+    background-size: cover;
+  }
+
+  main {
+    padding: unset;
+  }
+
+  main > div {
+    padding-inline: 24px;
+    margin-top: 65px;
+    font-size: 18px;
+    width: 100%;
+  }
+  main > div > p {
+    margin-top: 20px;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  section {
+    padding: revert;
+    width: 100vw;
+    margin-top: 166px;
+    background-position: center center;
+  }
+
+  section > img {
+    height: 430px;
+    width: 208px;
+    left: 80px;
+    bottom: 268px;
+  }
+
+  section > aside {
+    top: 490px;
+    right: 0;
+    height: 546px;
+    width: 100vw;
+    padding: 48px 36px 48px 36px;
+  }
+
+  section > aside h2 {
+    font-size: 32px;
+  }
+
+  section > aside p {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  section > aside > div {
+    margin-top: 28px;
+  }
+
+  section > aside > button:first-of-type {
+    margin-top: 28px;
+  }
+
+  footer {
+    padding-inline: 24px;
+    flex-direction: column;
+    margin-top: 500px;
+  }
+
+  footer > .left {
+    width: 100%;
+  }
+
+  footer > .left > p {
+    width: 100%;
+  }
+
+  footer > ul {
+    margin-top: 64px;
+    margin-left: 0;
+  }
+}
